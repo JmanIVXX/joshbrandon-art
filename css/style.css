@@ -385,6 +385,39 @@ img {
 .gallery-item:nth-child(5) { transition-delay: 0.2s; }
 .gallery-item:nth-child(6) { transition-delay: 0.3s; }
 
+/* --- Video items --- */
+.gallery-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-item .gallery-image {
+  position: relative;
+  cursor: pointer;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  opacity: 0.8;
+  transition: opacity var(--transition);
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.video-item:hover .play-overlay {
+  opacity: 1;
+}
+
+.video-item.playing .play-overlay {
+  opacity: 0;
+}
+
 /* --- Lightbox --- */
 .lightbox {
   position: fixed;

@@ -84,13 +84,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLightbox();
   });
 
-  // --- Placeholder colors ---
-  // Adds color accent to placeholder cards (remove when using real images)
-  document.querySelectorAll('.gallery-image.placeholder').forEach(el => {
-    const color = el.dataset.color;
-    if (color) {
-      el.style.borderBottom = `2px solid ${color}`;
-    }
+  // --- Video play/pause on click ---
+  document.querySelectorAll('.video-item').forEach(item => {
+    const video = item.querySelector('video');
+    if (!video) return;
+    item.querySelector('.gallery-image').addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        item.classList.add('playing');
+      } else {
+        video.pause();
+        item.classList.remove('playing');
+      }
+    });
+    video.addEventListener('ended', () => {
+      item.classList.remove('playing');
+    });
   });
 
 });
