@@ -8,9 +8,12 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Subtle noise texture overlay -->
+  <div class="spray-texture"></div>
 
   <!-- Navigation -->
   <nav class="nav">
@@ -36,10 +39,35 @@
 
   <!-- Hero -->
   <header class="hero">
+    <!-- SVG Splatter Decorations -->
+    <svg class="splatter splatter-pink" style="top: 10%; left: 5%; width: 200px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="60" fill="currentColor"/>
+      <circle cx="45" cy="80" r="20" fill="currentColor"/>
+      <circle cx="155" cy="70" r="25" fill="currentColor"/>
+      <circle cx="70" cy="150" r="18" fill="currentColor"/>
+      <circle cx="140" cy="145" r="22" fill="currentColor"/>
+      <circle cx="30" cy="120" r="12" fill="currentColor"/>
+      <circle cx="170" cy="120" r="10" fill="currentColor"/>
+      <circle cx="85" cy="40" r="14" fill="currentColor"/>
+      <circle cx="120" cy="165" r="8" fill="currentColor"/>
+    </svg>
+    <svg class="splatter splatter-green" style="bottom: 15%; right: 5%; width: 250px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="55" fill="currentColor"/>
+      <circle cx="50" cy="60" r="22" fill="currentColor"/>
+      <circle cx="150" cy="55" r="18" fill="currentColor"/>
+      <circle cx="40" cy="130" r="15" fill="currentColor"/>
+      <circle cx="160" cy="140" r="20" fill="currentColor"/>
+      <circle cx="100" cy="40" r="12" fill="currentColor"/>
+      <circle cx="75" cy="160" r="10" fill="currentColor"/>
+      <circle cx="130" cy="30" r="8" fill="currentColor"/>
+    </svg>
+
     <div class="hero-content">
-      <h1 class="hero-title">Josh Brandon</h1>
-      <p class="hero-subtitle">Artist & Creator</p>
-      <a href="#work" class="hero-cta">View My Work</a>
+      <h1 class="hero-title">
+        Josh<br><span class="highlight">Brandon</span>
+      </h1>
+      <p class="hero-subtitle">Artist // Creator // Troublemaker</p>
+      <a href="#work" class="hero-cta">See The Work</a>
     </div>
   </header>
 
@@ -101,7 +129,6 @@
           Welcome! I'm Josh Brandon — an artist and creator. This is where I share my work.
         </p>
         <p>
-          <!-- Edit this to tell your story. What do you create? What inspires you? What mediums do you work in? -->
           Feel free to look around and reach out if anything catches your eye.
         </p>
       </div>
@@ -111,12 +138,11 @@
   <!-- Contact -->
   <section id="contact" class="section section-contact">
     <h2 class="section-title">Get in Touch</h2>
-    <p class="contact-text">Interested in my work or want to collaborate? Reach out.</p>
+    <p class="contact-text">Interested in my work or want to collaborate? Let's talk.</p>
     <div class="contact-links">
-      <!-- Replace # with your actual links -->
       <a href="mailto:your@email.com" class="contact-link">Email</a>
-      <a href="#" class="contact-link">Instagram</a>
-      <a href="#" class="contact-link">Twitter / X</a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.artstation.com/YOUR-ARTSTATION" class="contact-link" target="_blank" rel="noopener">ArtStation</a>
     </div>
   </section>
 
