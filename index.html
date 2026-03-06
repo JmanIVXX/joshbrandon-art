@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Josh Brandon | Art Portfolio</title>
-  <meta name="description" content="Art portfolio of Josh Brandon. Original artwork, illustrations, and creative projects.">
+  <meta name="description" content="Art portfolio of Josh Brandon. Original artwork, illustrations, game dev, and creative projects.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +12,15 @@
 </head>
 <body>
 
-  <!-- Subtle noise texture overlay -->
   <div class="spray-texture"></div>
 
   <!-- Navigation -->
   <nav class="nav">
     <a href="#" class="nav-logo">Josh Brandon</a>
     <div class="nav-links">
-      <a href="#work">Work</a>
+      <a href="#featured">Games</a>
+      <a href="#illustrations">Art</a>
+      <a href="#3d">3D</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
@@ -32,14 +33,15 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu">
-    <a href="#work">Work</a>
+    <a href="#featured">Games</a>
+    <a href="#illustrations">Art</a>
+    <a href="#3d">3D</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
 
   <!-- Hero -->
   <header class="hero">
-    <!-- SVG Splatter Decorations -->
     <svg class="splatter splatter-pink" style="top: 10%; left: 5%; width: 200px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <circle cx="100" cy="100" r="60" fill="currentColor"/>
       <circle cx="45" cy="80" r="20" fill="currentColor"/>
@@ -67,88 +69,211 @@
         Josh<br><span class="highlight">Brandon</span>
       </h1>
       <p class="hero-subtitle">Artist // Creator // Troublemaker</p>
-      <a href="#work" class="hero-cta">See The Work</a>
+      <a href="#featured" class="hero-cta">See The Work</a>
     </div>
   </header>
 
-  <!-- Gallery / Work Section -->
-  <section id="work" class="section">
-    <h2 class="section-title">Selected Work</h2>
-    <div class="gallery">
+  <!-- ===== FEATURED: Choc Frog ===== -->
+  <section id="featured" class="section-full bg-dark">
+    <div class="section-inner">
+      <div class="featured-badge">Lil Indie Games Presents</div>
+      <h2 class="section-title light">Featured Project</h2>
 
-      <div class="gallery-item">
-        <div class="gallery-image">
-          <img src="images/Goddess_Cat_Pt_3.jpg" alt="Goddess Cat — golden Egyptian cat goddess digital painting">
+      <div class="featured-game">
+        <div class="featured-media video-item">
+          <div class="gallery-image video-frame">
+            <video src="images/choc-frog-gameplay.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="play-overlay">&#9655;</div>
+          </div>
         </div>
-        <div class="gallery-info">
-          <h3>Goddess Cat Pt. 3</h3>
-          <p>Digital Painting</p>
+        <div class="featured-info">
+          <h3 class="featured-game-title">Choc Frog</h3>
+          <p class="featured-genre">Action Adventure / Platformer</p>
+          <p class="featured-desc">
+            An action-packed adventure where you play as a chocolate-powered frog battling through
+            enchanted forests, ancient arenas, and frozen mountains. Explore a handcrafted world
+            full of secrets, enemies, and boss fights.
+          </p>
+          <div class="featured-actions">
+            <a href="#" class="btn-store">Play / Store Page</a>
+            <a href="#" class="btn-secondary-light">Watch Trailer</a>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-item">
-        <div class="gallery-image">
-          <img src="images/IMG_0989.png" alt="Death Knight — armored knight on horseback concept art">
+      <div class="featured-art-row">
+        <div class="featured-art-item tilted-left">
+          <img src="images/IMG_2171.png" alt="Choc Frog character sprites">
+          <span>Character Sprites</span>
         </div>
-        <div class="gallery-info">
-          <h3>Death Knight</h3>
-          <p>Character Concept Art</p>
+        <div class="featured-art-item">
+          <img src="images/IMG_2164.png" alt="Choc Frog UI elements">
+          <span>Game UI</span>
         </div>
-      </div>
-
-      <div class="gallery-item">
-        <div class="gallery-image">
-          <img src="images/Untitled_Artwork.png" alt="Choc Frog game world map interface">
-        </div>
-        <div class="gallery-info">
-          <h3>Choc Frog — World Map</h3>
-          <p>Game UI Design</p>
+        <div class="featured-art-item tilted-right">
+          <img src="images/Final_Colour.png" alt="Choc Frog wildlife and nature sprites">
+          <span>World Sprites</span>
         </div>
       </div>
-
-      <div class="gallery-item video-item">
-        <div class="gallery-image">
-          <video src="images/choc-frog-gameplay.mp4" muted loop playsinline preload="metadata"></video>
-          <div class="play-overlay">&#9655;</div>
-        </div>
-        <div class="gallery-info">
-          <h3>Choc Frog — Gameplay</h3>
-          <p>Beta Footage</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section section-about">
-    <div class="about-content">
+  <!-- ===== CTA: Commissions Open ===== -->
+  <div class="cta-banner bg-pink">
+    <div class="cta-inner">
+      <h2 class="cta-text">Commissions Open</h2>
+      <p class="cta-sub">Character design, illustrations, game art — let's make something cool.</p>
+      <a href="#contact" class="cta-btn">Get a Quote</a>
+    </div>
+  </div>
+
+  <!-- ===== ILLUSTRATIONS & GAME ART ===== -->
+  <section id="illustrations" class="section-full bg-white">
+    <div class="section-inner">
+      <h2 class="section-title">Illustrations & Concept Art</h2>
+      <div class="gallery-masonry">
+
+        <div class="gallery-item tilted-left">
+          <div class="gallery-image">
+            <img src="images/Goddess_Cat_Pt_3.jpg" alt="Goddess Cat — golden Egyptian cat goddess">
+          </div>
+          <div class="gallery-info">
+            <h3>Goddess Cat Pt. 3</h3>
+            <p>Digital Painting</p>
+          </div>
+        </div>
+
+        <div class="gallery-item tilted-right">
+          <div class="gallery-image">
+            <img src="images/mushroom-trees.png" alt="Mushroom forest illustration with guitar pedal">
+          </div>
+          <div class="gallery-info">
+            <h3>Mushroom Trees</h3>
+            <p>Ink Illustration</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="images/IMG_0989.png" alt="Death Knight on horseback">
+          </div>
+          <div class="gallery-info">
+            <h3>Death Knight</h3>
+            <p>Character Concept Art</p>
+          </div>
+        </div>
+
+        <div class="gallery-item tilted-left">
+          <div class="gallery-image">
+            <img src="images/Creatures.png" alt="Creature design sketches">
+          </div>
+          <div class="gallery-info">
+            <h3>Creature Studies</h3>
+            <p>Pencil Sketches</p>
+          </div>
+        </div>
+
+        <div class="gallery-item tilted-right">
+          <div class="gallery-image">
+            <img src="images/fantasy.png" alt="Fantasy character face explorations">
+          </div>
+          <div class="gallery-info">
+            <h3>Character Explorations</h3>
+            <p>Pencil Sketches</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="images/Apes.png" alt="Alien character head profiles">
+          </div>
+          <div class="gallery-info">
+            <h3>Alien Profiles</h3>
+            <p>Character Design</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3D WORK ===== -->
+  <section id="3d" class="section-full bg-grey">
+    <div class="section-inner">
+      <h2 class="section-title">3D Work</h2>
+      <p class="section-subtitle">Coming soon — 3D models, renders, and more.</p>
+      <div class="gallery-masonry">
+
+        <div class="gallery-item placeholder-card">
+          <div class="gallery-image placeholder-art"><span>3D Render</span></div>
+          <div class="gallery-info">
+            <h3>Coming Soon</h3>
+            <p>3D Model / Render</p>
+          </div>
+        </div>
+
+        <div class="gallery-item placeholder-card">
+          <div class="gallery-image placeholder-art"><span>3D Render</span></div>
+          <div class="gallery-info">
+            <h3>Coming Soon</h3>
+            <p>3D Model / Render</p>
+          </div>
+        </div>
+
+        <div class="gallery-item placeholder-card">
+          <div class="gallery-image placeholder-art"><span>3D Render</span></div>
+          <div class="gallery-info">
+            <h3>Coming Soon</h3>
+            <p>3D Model / Render</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA: Hire Now ===== -->
+  <div class="cta-banner bg-green">
+    <div class="cta-inner">
+      <h2 class="cta-text">Available for Hire</h2>
+      <p class="cta-sub">Freelance artist & game developer. Full-time or project-based.</p>
+      <a href="#contact" class="cta-btn dark">Hire Me</a>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section-full bg-white">
+    <div class="section-inner section-narrow">
       <h2 class="section-title">About</h2>
       <div class="about-text">
         <p>
-          Welcome! I'm Josh Brandon — an artist and creator. This is where I share my work.
+          Welcome! I'm Josh Brandon — an artist, game developer, and creator.
+          I run <strong>Lil Indie Games</strong>, where I build the kind of games I want to play.
         </p>
         <p>
-          Feel free to look around and reach out if anything catches your eye.
+          From concept art and illustrations to 3D work and full game development —
+          this is where I share it all. Feel free to look around and reach out if anything catches your eye.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section section-contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <p class="contact-text">Interested in my work or want to collaborate? Let's talk.</p>
-    <div class="contact-links">
-      <a href="mailto:your@email.com" class="contact-link">Email</a>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.artstation.com/YOUR-ARTSTATION" class="contact-link" target="_blank" rel="noopener">ArtStation</a>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section-full bg-dark">
+    <div class="section-inner section-narrow" style="text-align: center;">
+      <h2 class="section-title light">Get in Touch</h2>
+      <p class="contact-text">Interested in my work or want to collaborate? Let's talk.</p>
+      <div class="contact-links">
+        <a href="mailto:your@email.com" class="contact-link">Email</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.artstation.com/YOUR-ARTSTATION" class="contact-link" target="_blank" rel="noopener">ArtStation</a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2026 Josh Brandon. All rights reserved.</p>
+    <p>&copy; 2026 Josh Brandon / Lil Indie Games. All rights reserved.</p>
   </footer>
 
   <script src="js/main.js"></script>
