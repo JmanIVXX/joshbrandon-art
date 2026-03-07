@@ -1,16 +1,16 @@
 /* ========================================
-   Josh Brandon — Dark Portfolio
+   Josh Brandon — Portfolio
    ======================================== */
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #0b0b0b;
-  --bg-alt: #101010;
-  --surface: #161616;
-  --text: #e8e8e8;
-  --text-muted: #777;
-  --text-dim: #444;
+  --bg: #f0f0f0;
+  --bg-alt: #ffffff;
+  --surface: #e6e6e6;
+  --text: #1a1a1a;
+  --text-muted: #555;
+  --text-dim: #999;
   --pink: #ff2d95;
   --green: #39ff14;
   --green-dark: #2bcc0f;
@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
   display: inline-block; padding: 0.9rem 2.2rem;
   background: transparent; color: var(--text);
   font-family: var(--font-display); font-size: 0.9rem; text-transform: uppercase;
-  border: 2px solid var(--text-dim); border-radius: 3px;
+  border: 2px solid var(--text); border-radius: 3px;
   transition: all var(--ease); cursor: pointer;
 }
 .btn-outline:hover { border-color: var(--pink); color: var(--pink); transform: translateY(-2px); }
@@ -78,11 +78,11 @@ img { max-width: 100%; display: block; }
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1rem 2rem;
-  background: rgba(11,11,11,0.9);
+  background: rgba(240,240,240,0.92);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
-.nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+.nav.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
 
 .nav-logo {
   font-family: var(--font-display); font-size: 1.4rem; color: var(--text);
@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
 .nav-links { display: flex; gap: 1.75rem; }
 .nav-links a {
   font-family: var(--font-display); font-size: 0.8rem;
-  text-transform: uppercase; color: var(--text-muted); position: relative;
+  text-transform: uppercase; color: var(--text); position: relative;
   transition: color var(--ease);
 }
 .nav-links a::after {
@@ -121,7 +121,7 @@ img { max-width: 100%; display: block; }
   gap: 2.5rem; opacity: 0; pointer-events: none; transition: opacity var(--ease);
 }
 .mobile-menu.active { opacity: 1; pointer-events: all; }
-.mobile-menu a { font-family: var(--font-display); font-size: 2.2rem; color: var(--text-muted); }
+.mobile-menu a { font-family: var(--font-display); font-size: 2.2rem; color: var(--text); }
 .mobile-menu a:hover { color: var(--pink); }
 
 /* ========================================
@@ -167,11 +167,11 @@ img { max-width: 100%; display: block; }
 }
 .hero-art img {
   width: 100%; max-height: 80vh; object-fit: contain;
-  filter: drop-shadow(0 20px 60px rgba(57, 255, 20, 0.08));
+  filter: drop-shadow(0 16px 48px rgba(0,0,0,0.25));
   transition: filter 0.6s ease;
 }
 .hero-art:hover img {
-  filter: drop-shadow(0 20px 80px rgba(57, 255, 20, 0.14));
+  filter: drop-shadow(0 20px 60px rgba(0,0,0,0.35));
 }
 
 /* Scroll hint */
@@ -228,7 +228,7 @@ img { max-width: 100%; display: block; }
   text-align: center; margin: 4rem 0 2rem; color: var(--text-muted);
 }
 
-.divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 4rem 0; }
+.divider { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 4rem 0; }
 
 /* ========================================
    ART PIECES — floating, no boxes
@@ -239,15 +239,15 @@ img { max-width: 100%; display: block; }
 
 .art-piece img {
   width: 100%; height: auto; display: block;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.18));
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 .art-piece:hover img {
   transform: scale(1.02) translateY(-4px);
-  filter: drop-shadow(0 14px 36px rgba(255,45,149,0.2));
+  filter: drop-shadow(0 12px 32px rgba(255,45,149,0.25));
 }
 .art-piece:nth-child(even):hover img {
-  filter: drop-shadow(0 14px 36px rgba(57,255,20,0.15));
+  filter: drop-shadow(0 12px 32px rgba(43,204,15,0.2));
 }
 
 /* Screenshot-style images (game screenshots with backgrounds) */
@@ -294,11 +294,11 @@ img { max-width: 100%; display: block; }
 }
 .game-title::after {
   content: ''; position: absolute; bottom: 2px; left: -4px; right: -4px; height: 10px;
-  background: var(--pink); opacity: 0.25; z-index: -1;
+  background: var(--pink); opacity: 0.2; z-index: -1;
 }
 
 .game-genre {
-  font-family: var(--font-display); font-size: 0.8rem; color: var(--green);
+  font-family: var(--font-display); font-size: 0.8rem; color: var(--green-dark);
   text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 0.06em;
 }
 
@@ -307,10 +307,10 @@ img { max-width: 100%; display: block; }
   position: relative; cursor: pointer;
   border-radius: 6px; overflow: hidden;
   background: #000; margin-bottom: 1.5rem;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
   transition: box-shadow var(--ease);
 }
-.game-video-wrap:hover { box-shadow: 0 12px 50px rgba(0,0,0,0.7); }
+.game-video-wrap:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.25); }
 
 .game-video-wrap video {
   width: 100%; height: auto; display: block;
@@ -338,6 +338,20 @@ img { max-width: 100%; display: block; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
 }
 
+/* Choc Frog compact — small video left, art + info right */
+.game-compact {
+  display: grid; grid-template-columns: 1fr 2.5fr;
+  gap: 2rem; align-items: start;
+}
+.game-compact .game-video-wrap { margin-bottom: 0; }
+.game-compact .play-btn.small { width: 40px; height: 40px; font-size: 1rem; }
+.game-compact-right {}
+.game-compact-art {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.game-compact-right .game-desc { margin-bottom: 1rem; }
+
 /* ========================================
    REDDIT AVATARS
    ======================================== */
@@ -355,6 +369,7 @@ img { max-width: 100%; display: block; }
 }
 .avatar-trio .art-piece img {
   border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
 }
 
 /* ========================================
@@ -403,14 +418,14 @@ img { max-width: 100%; display: block; }
 /* ========================================
    CONTACT
    ======================================== */
-.contact-text { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; }
+.contact-text { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; text-align: center; }
 .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* ========================================
    FOOTER
    ======================================== */
 .footer {
-  text-align: center; padding: 2rem; background: #050505;
+  text-align: center; padding: 2rem; background: var(--surface);
   font-size: 0.8rem; color: var(--text-dim);
 }
 
@@ -474,6 +489,8 @@ img { max-width: 100%; display: block; }
   .project-pair { grid-template-columns: 1fr; gap: 2rem; }
   .game-below { grid-template-columns: 1fr; }
   .game-assets-row { grid-template-columns: 1fr; }
+  .game-compact { grid-template-columns: 1fr; }
+  .game-compact-art { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
