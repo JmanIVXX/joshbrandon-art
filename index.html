@@ -3,8 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Josh Brandon | Art Portfolio</title>
-  <meta name="description" content="Art portfolio of Josh Brandon. Original artwork, illustrations, game dev, and creative projects.">
+
+  <!-- Primary SEO -->
+  <title>Josh Brandon | 3D Character Artist & Game Developer</title>
+  <meta name="description" content="Josh Brandon is a freelance 3D character artist and game developer available for hire. Specialising in 3D character modeling, concept art, hand-painted textures, game assets, and indie game development in Unity.">
+  <meta name="keywords" content="3D character artist, game artist, freelance game artist, concept artist, 3D modeler, game developer, Unity developer, character modeling, hand painted textures, ZBrush, Substance Painter, Blender, indie game developer, game art portfolio, freelance 3D artist Australia">
+  <meta name="author" content="Josh Brandon">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://joshbrandon.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joshbrandon.com/">
+  <meta property="og:title" content="Josh Brandon | 3D Character Artist & Game Developer">
+  <meta property="og:description" content="Freelance 3D character artist and game developer. Character modeling, concept art, game assets, and full indie game development.">
+  <meta property="og:image" content="https://joshbrandon.com/images/Sorceress_High_Quality.png">
+  <meta property="og:site_name" content="Josh Brandon Portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Josh Brandon | 3D Character Artist & Game Developer">
+  <meta name="twitter:description" content="Freelance 3D character artist and game developer. Available for hire.">
+  <meta name="twitter:image" content="https://joshbrandon.com/images/Sorceress_High_Quality.png">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Josh Brandon",
+    "jobTitle": "3D Character Artist & Game Developer",
+    "description": "Freelance 3D character artist and game developer specialising in character modeling, concept art, hand-painted textures, and indie game development.",
+    "url": "https://joshbrandon.com",
+    "sameAs": [
+      "https://www.artstation.com/YOUR-ARTSTATION",
+      "https://www.linkedin.com/in/YOUR-LINKEDIN"
+    ],
+    "knowsAbout": ["3D Character Modeling", "Concept Art", "Game Development", "Hand-Painted Textures", "Unity", "ZBrush", "Blender", "Substance Painter"],
+    "offers": {
+      "@type": "Offer",
+      "name": "Freelance Game Art & 3D Character Modeling",
+      "description": "Available for freelance and studio work: 3D character modeling, concept art, game assets, and game development."
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,258 +58,407 @@
   <div class="spray-texture"></div>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="#" class="nav-logo">Josh Brandon</a>
     <div class="nav-links">
-      <a href="#featured">Games</a>
-      <a href="#illustrations">Art</a>
+      <a href="#games">Games</a>
       <a href="#3d">3D</a>
+      <a href="#art">Art</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
     <button class="nav-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <a href="#featured">Games</a>
-    <a href="#illustrations">Art</a>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="#games">Games</a>
     <a href="#3d">3D</a>
+    <a href="#art">Art</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- Hero -->
-  <header class="hero">
-    <svg class="splatter splatter-pink" style="top: 10%; left: 5%; width: 200px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="60" fill="currentColor"/>
-      <circle cx="45" cy="80" r="20" fill="currentColor"/>
-      <circle cx="155" cy="70" r="25" fill="currentColor"/>
-      <circle cx="70" cy="150" r="18" fill="currentColor"/>
-      <circle cx="140" cy="145" r="22" fill="currentColor"/>
-      <circle cx="30" cy="120" r="12" fill="currentColor"/>
-      <circle cx="170" cy="120" r="10" fill="currentColor"/>
-      <circle cx="85" cy="40" r="14" fill="currentColor"/>
-      <circle cx="120" cy="165" r="8" fill="currentColor"/>
-    </svg>
-    <svg class="splatter splatter-green" style="bottom: 15%; right: 5%; width: 250px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="55" fill="currentColor"/>
-      <circle cx="50" cy="60" r="22" fill="currentColor"/>
-      <circle cx="150" cy="55" r="18" fill="currentColor"/>
-      <circle cx="40" cy="130" r="15" fill="currentColor"/>
-      <circle cx="160" cy="140" r="20" fill="currentColor"/>
-      <circle cx="100" cy="40" r="12" fill="currentColor"/>
-      <circle cx="75" cy="160" r="10" fill="currentColor"/>
-      <circle cx="130" cy="30" r="8" fill="currentColor"/>
-    </svg>
-
+  <!-- Hero — split layout: text left, art right -->
+  <header class="hero" role="banner">
     <div class="hero-content">
-      <h1 class="hero-title">
-        Josh<br><span class="highlight">Brandon</span>
-      </h1>
-      <p class="hero-subtitle">Artist // Creator // Troublemaker</p>
-      <a href="#featured" class="hero-cta">See The Work</a>
+      <p class="hero-eyebrow">Available for Hire</p>
+      <h1 class="hero-title">Josh<br><span class="highlight">Brandon</span></h1>
+      <p class="hero-subtitle">3D Character Artist &amp; Game Developer</p>
+      <div class="hero-actions">
+        <a href="#games" class="hero-cta">View My Work</a>
+        <a href="#contact" class="hero-cta-secondary">Hire Me</a>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-art-frame">
+        <img src="images/Sorceress_High_Quality.png" alt="Sorceress — 3D character model and render by Josh Brandon" loading="eager">
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
     </div>
   </header>
 
-  <!-- ===== FEATURED: Choc Frog ===== -->
-  <section id="featured" class="section-full bg-dark">
+  <!-- ===== GAMES ===== -->
+  <section id="games" class="section-full bg-dark" aria-labelledby="games-heading">
     <div class="section-inner">
-      <div class="featured-badge">Lil Indie Games Presents</div>
-      <h2 class="section-title light">Featured Project</h2>
+      <p class="featured-badge">Lil Indie Games</p>
+      <h2 id="games-heading" class="section-title light">Games</h2>
 
-      <div class="featured-game">
-        <div class="featured-media video-item">
-          <div class="gallery-image video-frame">
-            <video src="images/choc-frog-gameplay.mp4" muted loop playsinline preload="metadata"></video>
-            <div class="play-overlay">&#9655;</div>
+      <!-- Party Ships -->
+      <div class="game-entry">
+        <h3 class="game-title">Party Ships</h3>
+        <p class="game-genre">Indie Game</p>
+        <!-- NOTE TO JOSH: Footage.mkv may not play in Safari. Export as MP4 from DaVinci Resolve for full browser support. -->
+        <div class="game-video-wrap video-item">
+          <video muted loop playsinline preload="metadata" class="game-video">
+            <source src="images/Footage.mkv" type="video/x-matroska">
+          </video>
+          <div class="play-overlay">&#9655;</div>
+        </div>
+        <div class="game-footer">
+          <div class="game-info">
+            <p class="game-desc">A fast-paced party game — items, chaos, and a lot of fun. Full art direction and game development from the ground up.</p>
+            <div class="game-actions">
+              <a href="#" class="btn-store">Play / Store Page</a>
+            </div>
+          </div>
+          <div class="game-art-row single">
+            <div class="game-art-item">
+              <img src="images/Party Ships Items.png" alt="Party Ships — in-game items and asset art">
+              <span>Items &amp; Assets</span>
+            </div>
           </div>
         </div>
-        <div class="featured-info">
-          <h3 class="featured-game-title">Choc Frog</h3>
-          <p class="featured-genre">Action Adventure / Platformer</p>
-          <p class="featured-desc">
-            An action-packed adventure where you play as a chocolate-powered frog battling through
-            enchanted forests, ancient arenas, and frozen mountains. Explore a handcrafted world
-            full of secrets, enemies, and boss fights.
-          </p>
-          <div class="featured-actions">
-            <a href="#" class="btn-store">Play / Store Page</a>
-            <a href="#" class="btn-secondary-light">Watch Trailer</a>
+      </div>
+
+      <hr class="game-divider">
+
+      <!-- Choc Frog -->
+      <div class="game-entry">
+        <h3 class="game-title">Choc Frog</h3>
+        <p class="game-genre">Action Adventure / Platformer</p>
+        <div class="game-video-wrap video-item">
+          <video muted loop playsinline preload="metadata" class="game-video">
+            <source src="images/choc-frog-gameplay.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay">&#9655;</div>
+        </div>
+        <div class="game-footer">
+          <div class="game-info">
+            <p class="game-desc">An action-packed adventure where you play as a chocolate-powered frog battling through enchanted forests, ancient arenas, and frozen mountains. Full game — handcrafted world, secrets, enemies, and boss fights.</p>
+            <div class="game-actions">
+              <a href="#" class="btn-store">App Store</a>
+              <a href="#" class="btn-secondary-light">Watch Trailer</a>
+            </div>
+          </div>
+          <div class="game-art-row double">
+            <div class="game-art-item tilted-left">
+              <img src="images/IMG_2171.png" alt="Choc Frog — character sprites and animation frames">
+              <span>Character Sprites</span>
+            </div>
+            <div class="game-art-item tilted-right">
+              <img src="images/IMG_2164.png" alt="Choc Frog — game UI design and elements">
+              <span>Game UI</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="featured-art-row">
-        <div class="featured-art-item tilted-left">
-          <img src="images/IMG_2171.png" alt="Choc Frog character sprites">
-          <span>Character Sprites</span>
-        </div>
-        <div class="featured-art-item">
-          <img src="images/IMG_2164.png" alt="Choc Frog UI elements">
-          <span>Game UI</span>
-        </div>
-        <div class="featured-art-item tilted-right">
-          <img src="images/Final_Colour.png" alt="Choc Frog wildlife and nature sprites">
-          <span>World Sprites</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA: Commissions Open ===== -->
-  <div class="cta-banner bg-pink">
-    <div class="cta-inner">
-      <h2 class="cta-text">Commissions Open</h2>
-      <p class="cta-sub">Character design, illustrations, game art — let's make something cool.</p>
-      <a href="#contact" class="cta-btn">Get a Quote</a>
-    </div>
-  </div>
-
-  <!-- ===== ILLUSTRATIONS & GAME ART ===== -->
-  <section id="illustrations" class="section-full bg-white">
-    <div class="section-inner">
-      <h2 class="section-title">Illustrations & Concept Art</h2>
-      <div class="gallery-masonry">
-
-        <div class="gallery-item tilted-left">
-          <div class="gallery-image">
-            <img src="images/Goddess_Cat_Pt_3.jpg" alt="Goddess Cat — golden Egyptian cat goddess">
-          </div>
-          <div class="gallery-info">
-            <h3>Goddess Cat Pt. 3</h3>
-            <p>Digital Painting</p>
-          </div>
-        </div>
-
-        <div class="gallery-item tilted-right">
-          <div class="gallery-image">
-            <img src="images/mushroom-trees.png" alt="Mushroom forest illustration with guitar pedal">
-          </div>
-          <div class="gallery-info">
-            <h3>Mushroom Trees</h3>
-            <p>Ink Illustration</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="images/IMG_0989.png" alt="Death Knight on horseback">
-          </div>
-          <div class="gallery-info">
-            <h3>Death Knight</h3>
-            <p>Character Concept Art</p>
-          </div>
-        </div>
-
-        <div class="gallery-item tilted-left">
-          <div class="gallery-image">
-            <img src="images/Creatures.png" alt="Creature design sketches">
-          </div>
-          <div class="gallery-info">
-            <h3>Creature Studies</h3>
-            <p>Pencil Sketches</p>
-          </div>
-        </div>
-
-        <div class="gallery-item tilted-right">
-          <div class="gallery-image">
-            <img src="images/fantasy.png" alt="Fantasy character face explorations">
-          </div>
-          <div class="gallery-info">
-            <h3>Character Explorations</h3>
-            <p>Pencil Sketches</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="images/Apes.png" alt="Alien character head profiles">
-          </div>
-          <div class="gallery-info">
-            <h3>Alien Profiles</h3>
-            <p>Character Design</p>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
   <!-- ===== 3D WORK ===== -->
-  <section id="3d" class="section-full bg-grey">
+  <section id="3d" class="section-full bg-grey" aria-labelledby="3d-heading">
     <div class="section-inner">
-      <h2 class="section-title">3D Work</h2>
-      <p class="section-subtitle">Coming soon — 3D models, renders, and more.</p>
+      <h2 id="3d-heading" class="section-title">3D Work</h2>
+      <p class="section-subtitle">Character modeling, props, and environments — modeled, textured, and rendered.</p>
+
+      <!-- Hero character trio -->
+      <div class="character-trio">
+        <div class="char-card">
+          <div class="char-image">
+            <img src="images/Sorceress_High_Quality.png" alt="Sorceress — 3D character model with high-quality render by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Sorceress</h3>
+            <p>3D Character — Model &amp; Render</p>
+          </div>
+        </div>
+        <div class="char-card">
+          <div class="char-image">
+            <img src="images/DINO_High_Quality.png" alt="Dino — 3D character model with high-quality render by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Dino</h3>
+            <p>3D Character — Model &amp; Render</p>
+          </div>
+        </div>
+        <div class="char-card">
+          <div class="char-image">
+            <img src="images/ORC_high_Quality.png" alt="Orc — 3D character model with high-quality render by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Orc</h3>
+            <p>3D Character — Model &amp; Render</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Environments & Props -->
+      <h3 class="subsection-title">Environments &amp; Props</h3>
       <div class="gallery-masonry">
-
-        <div class="gallery-item placeholder-card">
-          <div class="gallery-image placeholder-art"><span>3D Render</span></div>
+        <div class="gallery-item">
+          <div class="gallery-image landscape">
+            <img src="images/Forest Scene Beauty Shot.png" alt="Forest environment — 3D scene with lighting and rendering by Josh Brandon">
+          </div>
           <div class="gallery-info">
-            <h3>Coming Soon</h3>
-            <p>3D Model / Render</p>
+            <h3>Forest Environment</h3>
+            <p>3D Scene &amp; Lighting</p>
           </div>
         </div>
-
-        <div class="gallery-item placeholder-card">
-          <div class="gallery-image placeholder-art"><span>3D Render</span></div>
+        <div class="gallery-item">
+          <div class="gallery-image landscape">
+            <img src="images/Bahn Mi Beauty Shot.png" alt="Bahn Mi — 3D prop beauty shot render">
+          </div>
           <div class="gallery-info">
-            <h3>Coming Soon</h3>
-            <p>3D Model / Render</p>
+            <h3>Bahn Mi</h3>
+            <p>3D Prop — Beauty Shot</p>
           </div>
         </div>
-
-        <div class="gallery-item placeholder-card">
-          <div class="gallery-image placeholder-art"><span>3D Render</span></div>
+        <div class="gallery-item">
+          <div class="gallery-image landscape">
+            <img src="images/Axe various Renders.png" alt="Axe weapon — various angle 3D renders by Josh Brandon">
+          </div>
           <div class="gallery-info">
-            <h3>Coming Soon</h3>
-            <p>3D Model / Render</p>
+            <h3>Axe — Weapon Renders</h3>
+            <p>3D Prop</p>
           </div>
         </div>
+        <div class="gallery-item">
+          <div class="gallery-image landscape">
+            <img src="images/Sword Render.png" alt="Sword — 3D prop render by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Sword</h3>
+            <p>3D Prop Render</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Process / Pipeline -->
+      <h3 class="subsection-title">Process &amp; Pipeline</h3>
+      <div class="gallery-masonry">
+        <div class="gallery-item">
+          <div class="gallery-image landscape">
+            <img src="images/Forest scene Model and Hand Paint.png" alt="Forest scene — 3D model alongside hand-painted texture process by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Forest Scene</h3>
+            <p>Model &amp; Hand-Painted Textures</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image landscape">
+            <img src="images/Halloween Model and Hand Paint.png" alt="Halloween character — 3D model with hand-painted textures process">
+          </div>
+          <div class="gallery-info">
+            <h3>Halloween Character</h3>
+            <p>Model &amp; Hand-Painted Textures</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image landscape">
+            <img src="images/Bahn Mi Renders.png" alt="Bahn Mi — multi-angle 3D prop renders">
+          </div>
+          <div class="gallery-info">
+            <h3>Bahn Mi — Multi-angle</h3>
+            <p>3D Prop Renders</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA: Hire Now ===== -->
-  <div class="cta-banner bg-green">
+  <!-- ===== CTA: HIRE ===== -->
+  <div class="cta-banner bg-pink">
     <div class="cta-inner">
       <h2 class="cta-text">Available for Hire</h2>
-      <p class="cta-sub">Freelance artist & game developer. Full-time or project-based.</p>
-      <a href="#contact" class="cta-btn dark">Hire Me</a>
+      <p class="cta-sub">3D character art, concept art, game assets, and game development — open to studio roles and freelance.</p>
+      <a href="#contact" class="cta-btn">Get in Touch</a>
+    </div>
+  </div>
+
+  <!-- ===== ART ===== -->
+  <section id="art" class="section-full bg-white" aria-labelledby="art-heading">
+    <div class="section-inner">
+      <h2 id="art-heading" class="section-title">Concept Art &amp; Illustration</h2>
+
+      <div class="gallery-masonry">
+        <div class="gallery-item tilted-right">
+          <div class="gallery-image">
+            <img src="images/Knight Concept Final.png" alt="Knight character — final concept art by Josh Brandon, game character design">
+          </div>
+          <div class="gallery-info">
+            <h3>Knight — Final Concept</h3>
+            <p>Character Concept Art</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-left">
+          <div class="gallery-image">
+            <img src="images/Knight process.png" alt="Knight character — concept art process, sketches to final design">
+          </div>
+          <div class="gallery-info">
+            <h3>Knight — Process</h3>
+            <p>Sketches &amp; Development</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="images/Dino Samurai Digital Paint.png" alt="Dino Samurai — digital painting character concept by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Dino Samurai</h3>
+            <p>Digital Painting</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-right">
+          <div class="gallery-image">
+            <img src="images/Magic Staff Digital Paint.png" alt="Magic staff — digital painting prop concept art">
+          </div>
+          <div class="gallery-info">
+            <h3>Magic Staff</h3>
+            <p>Digital Painting</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-left">
+          <div class="gallery-image">
+            <img src="images/Concept art (Circle of Life).png" alt="Circle of Life — concept art illustration by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Circle of Life — Concept</h3>
+            <p>Concept Art</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="images/Final Colour Vs Initial Sketch (Circle of Life).png" alt="Circle of Life — final colour versus initial sketch, art process comparison">
+          </div>
+          <div class="gallery-info">
+            <h3>Circle of Life — Final vs Sketch</h3>
+            <p>Art Process</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-right">
+          <div class="gallery-image">
+            <img src="images/Monsters.png" alt="Creature design studies — various monster and creature character designs by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Creature Studies</h3>
+            <p>Character Design</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-left">
+          <div class="gallery-image">
+            <img src="images/mushroom-trees.png" alt="Mushroom forest — ink illustration by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Mushroom Forest</h3>
+            <p>Ink Illustration</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Art & Sprites -->
+      <h3 class="subsection-title">Game Art &amp; Sprites</h3>
+      <div class="gallery-masonry">
+        <div class="gallery-item">
+          <div class="gallery-image sprite-frame">
+            <img src="images/Wurm Animation.gif" alt="Wurm — animated game character sprite by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Wurm</h3>
+            <p>Character Animation</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-left">
+          <div class="gallery-image sprite-frame">
+            <img src="images/Sprite Sheet (Game Jam).png" alt="Game jam sprite sheet — 2D game character and asset art">
+          </div>
+          <div class="gallery-info">
+            <h3>Sprite Sheet</h3>
+            <p>Game Jam Art</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-right">
+          <div class="gallery-image sprite-frame">
+            <img src="images/Flash Game Style Weapons.png" alt="Flash game style weapon assets — 2D game art by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>Weapons — Game Art</h3>
+            <p>2D Game Assets</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image sprite-frame">
+            <img src="images/Example UI.png" alt="Game UI design example — user interface art by Josh Brandon">
+          </div>
+          <div class="gallery-info">
+            <h3>UI Design</h3>
+            <p>Game UI</p>
+          </div>
+        </div>
+        <div class="gallery-item tilted-left">
+          <div class="gallery-image sprite-frame">
+            <img src="images/Necroferret (unrealized game) concept.png" alt="Necroferret — unrealized game concept art and character design">
+          </div>
+          <div class="gallery-info">
+            <h3>Necroferret</h3>
+            <p>Game Concept Art</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA: COMMISSIONS ===== -->
+  <div class="cta-banner bg-green">
+    <div class="cta-inner">
+      <h2 class="cta-text">Commissions Open</h2>
+      <p class="cta-sub">Character design, concept art, 3D modeling, game assets — let's build something.</p>
+      <a href="#contact" class="cta-btn dark">Get a Quote</a>
     </div>
   </div>
 
   <!-- ===== ABOUT ===== -->
-  <section id="about" class="section-full bg-white">
+  <section id="about" class="section-full bg-white" aria-labelledby="about-heading">
     <div class="section-inner section-narrow">
-      <h2 class="section-title">About</h2>
+      <h2 id="about-heading" class="section-title">About</h2>
       <div class="about-text">
-        <p>
-          Welcome! I'm Josh Brandon — an artist, game developer, and creator.
-          I run <strong>Lil Indie Games</strong>, where I build the kind of games I want to play.
-        </p>
-        <p>
-          From concept art and illustrations to 3D work and full game development —
-          this is where I share it all. Feel free to look around and reach out if anything catches your eye.
-        </p>
+        <p>I'm Josh Brandon — a 3D character artist and game developer based in Australia. I run <strong>Lil Indie Games</strong>, where I design, develop, and ship games from the ground up.</p>
+        <p>From concept to final render, I work across the full art pipeline: character modeling, hand-painted textures, concept art, 2D illustration, and game development in Unity. I like making things that feel alive and have personality.</p>
+        <p>Open to studio roles, freelance commissions, and collaborations. If something here catches your eye, get in touch.</p>
       </div>
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section-full bg-dark">
+  <section id="contact" class="section-full bg-dark" aria-labelledby="contact-heading">
     <div class="section-inner section-narrow" style="text-align: center;">
-      <h2 class="section-title light">Get in Touch</h2>
-      <p class="contact-text">Interested in my work or want to collaborate? Let's talk.</p>
+      <h2 id="contact-heading" class="section-title light">Get in Touch</h2>
+      <p class="contact-text">Open to studio roles, freelance work, and commissions. Reach out and let's make something great.</p>
       <div class="contact-links">
         <a href="mailto:your@email.com" class="contact-link">Email</a>
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.artstation.com/YOUR-ARTSTATION" class="contact-link" target="_blank" rel="noopener">ArtStation</a>
+        <a href="https://www.artstation.com/YOUR-ARTSTATION" class="contact-link" target="_blank" rel="noopener noreferrer">ArtStation</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </section>

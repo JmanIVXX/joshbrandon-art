@@ -24,9 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Scroll hint: hide after first scroll ---
+  const scrollHint = document.querySelector('.scroll-hint');
+  if (scrollHint) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        scrollHint.classList.add('hidden');
+      }
+    }, { passive: true });
+  }
+
   // --- Scroll animations ---
   const animated = document.querySelectorAll(
-    '.gallery-item, .featured-art-item, .featured-game, .about-text, .contact-text, .contact-links'
+    '.gallery-item, .game-art-item, .char-card, .about-text, .contact-text, .contact-links'
   );
 
   const observer = new IntersectionObserver((entries) => {
@@ -36,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   animated.forEach(el => observer.observe(el));
 
@@ -49,57 +59,66 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImg = lightbox.querySelector('img');
   const lightboxClose = lightbox.querySelector('.lightbox-close');
 
-  document.querySelectorAll('.gallery-item:not(.video-item):not(.placeholder-card)').forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('.gallery-image img');
-      if (img) {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  });
-
-  // Also lightbox for featured art items
-  document.querySelectorAll('.featured-art-item:not(.placeholder-art)').forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('img');
-      if (img) {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  });
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
   const closeLightbox = () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
   };
-  lightbox.addEventListener('click', closeLightbox);
-  lightboxClose.addEventListener('click', closeLightbox);
+
+  // Lightbox: gallery items (not video)
+  document.querySelectorAll('.gallery-item:not(.video-item)').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('.gallery-image img');
+      if (img) openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Lightbox: character cards
+  document.querySelectorAll('.char-card').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('.char-image img');
+      if (img) openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Lightbox: game art items (static images, not video wrappers)
+  document.querySelectorAll('.game-art-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (img) openLightbox(img.src, img.alt);
+    });
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === lightboxClose) closeLightbox();
+  });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
   });
 
-  // --- Video play/pause on click ---
-  document.querySelectorAll('.video-item').forEach(item => {
-    const video = item.querySelector('video');
+  // --- Video play/pause (game videos + any future video items) ---
+  document.querySelectorAll('.game-video-wrap, .video-item').forEach(wrap => {
+    const video = wrap.querySelector('video');
     if (!video) return;
-    const clickTarget = item.querySelector('.gallery-image') || item;
-    clickTarget.addEventListener('click', () => {
+
+    wrap.addEventListener('click', () => {
       if (video.paused) {
         video.play();
-        item.classList.add('playing');
+        wrap.classList.add('playing');
       } else {
         video.pause();
-        item.classList.remove('playing');
+        wrap.classList.remove('playing');
       }
     });
+
     video.addEventListener('ended', () => {
-      item.classList.remove('playing');
+      wrap.classList.remove('playing');
     });
   });
 
