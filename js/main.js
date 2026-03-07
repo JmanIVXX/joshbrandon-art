@@ -1,109 +1,93 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Nav scroll effect ---
+  // --- Nav scroll ---
   const nav = document.querySelector('.nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  }, { passive: true });
 
-  // --- Mobile menu toggle ---
+  // --- Mobile menu ---
   const toggle = document.querySelector('.nav-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobile = document.querySelector('.mobile-menu');
 
   toggle.addEventListener('click', () => {
     toggle.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    mobile.classList.toggle('active');
+    document.body.style.overflow = mobile.classList.contains('active') ? 'hidden' : '';
   });
 
-  mobileMenu.querySelectorAll('a').forEach(link => {
+  mobile.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       toggle.classList.remove('active');
-      mobileMenu.classList.remove('active');
+      mobile.classList.remove('active');
       document.body.style.overflow = '';
     });
   });
 
-  // --- Scroll hint: hide after first scroll ---
-  const scrollHint = document.querySelector('.scroll-hint');
-  if (scrollHint) {
+  // --- Scroll hint hide ---
+  const hint = document.querySelector('.scroll-hint');
+  if (hint) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        scrollHint.classList.add('hidden');
-      }
+      if (window.scrollY > 80) hint.classList.add('hidden');
     }, { passive: true });
   }
 
-  // --- Scroll animations ---
-  const animated = document.querySelectorAll(
-    '.gallery-item, .game-art-item, .char-card, .about-text, .contact-text, .contact-links'
+  // --- Scroll reveal ---
+  const reveals = document.querySelectorAll(
+    '.art-piece, .project-pair, .project-solo, .about-text, .contact-text, .contact-links, .avatar-trio'
   );
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('vis');
+        obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
 
-  animated.forEach(el => observer.observe(el));
+  reveals.forEach(el => obs.observe(el));
 
   // --- Lightbox ---
-  const lightbox = document.createElement('div');
-  lightbox.className = 'lightbox';
-  lightbox.innerHTML = '<button class="lightbox-close">&times;</button><img src="" alt="">';
-  document.body.appendChild(lightbox);
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = '<button class="lightbox-close">&times;</button><img src="" alt="">';
+  document.body.appendChild(lb);
 
-  const lightboxImg = lightbox.querySelector('img');
-  const lightboxClose = lightbox.querySelector('.lightbox-close');
+  const lbImg = lb.querySelector('img');
 
-  function openLightbox(src, alt) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || '';
-    lightbox.classList.add('active');
+  function openLB(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  const closeLightbox = () => {
-    lightbox.classList.remove('active');
+  function closeLB() {
+    lb.classList.remove('active');
     document.body.style.overflow = '';
-  };
+  }
 
-  // Lightbox: gallery items (not video)
-  document.querySelectorAll('.gallery-item:not(.video-item)').forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('.gallery-image img');
-      if (img) openLightbox(img.src, img.alt);
+  // Click any art-piece (not inside a video wrapper) to open lightbox
+  document.querySelectorAll('.art-piece').forEach(piece => {
+    // Skip if it's inside a game-video-wrap
+    if (piece.closest('.game-video-wrap')) return;
+
+    piece.addEventListener('click', () => {
+      const img = piece.querySelector('img');
+      if (img) openLB(img.src, img.alt);
     });
   });
 
-  // Lightbox: character cards
-  document.querySelectorAll('.char-card').forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('.char-image img');
-      if (img) openLightbox(img.src, img.alt);
-    });
-  });
-
-  // Lightbox: game art items (static images, not video wrappers)
-  document.querySelectorAll('.game-art-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('img');
-      if (img) openLightbox(img.src, img.alt);
-    });
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox || e.target === lightboxClose) closeLightbox();
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb || e.target.classList.contains('lightbox-close')) closeLB();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'Escape') closeLB();
   });
 
-  // --- Video play/pause (game videos + any future video items) ---
-  document.querySelectorAll('.game-video-wrap, .video-item').forEach(wrap => {
+  // --- Video play/pause ---
+  document.querySelectorAll('.video-clickable').forEach(wrap => {
     const video = wrap.querySelector('video');
     if (!video) return;
 
@@ -117,9 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    video.addEventListener('ended', () => {
-      wrap.classList.remove('playing');
-    });
+    video.addEventListener('ended', () => wrap.classList.remove('playing'));
   });
 
 });
