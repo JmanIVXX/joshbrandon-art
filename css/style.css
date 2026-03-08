@@ -15,7 +15,7 @@
   --green: #39ff14;
   --green-dark: #2bcc0f;
   --reddit: #FF4500;
-  --font-display: 'Permanent Marker', cursive;
+  --font-display: 'Bebas Neue', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --ease: 0.3s ease;
   --max-w: 1200px;
@@ -316,6 +316,15 @@ img { max-width: 100%; display: block; }
   width: 100%; height: auto; display: block;
 }
 
+/* Cap featured video height so the whole thing is visible */
+.game-feature > .game-video-wrap {
+  max-height: 62vh;
+}
+.game-feature > .game-video-wrap video {
+  max-height: 62vh;
+  object-fit: contain;
+}
+
 .play-btn {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
   width: 60px; height: 60px; background: var(--pink);
@@ -338,9 +347,9 @@ img { max-width: 100%; display: block; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
 }
 
-/* Choc Frog compact — small video left, art + info right */
+/* Compact game layout — small video left, art + info right */
 .game-compact {
-  display: grid; grid-template-columns: 1fr 2.5fr;
+  display: grid; grid-template-columns: 1fr 1.8fr;
   gap: 2rem; align-items: start;
 }
 .game-compact .game-video-wrap { margin-bottom: 0; }
@@ -349,6 +358,11 @@ img { max-width: 100%; display: block; }
 .game-compact-art {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
   margin-bottom: 1.5rem;
+}
+/* Cap images in compact art so they don't overpower the layout */
+.game-compact-art .art-piece img {
+  max-height: 260px;
+  object-fit: contain;
 }
 .game-compact-right .game-desc { margin-bottom: 1rem; }
 
@@ -400,11 +414,11 @@ img { max-width: 100%; display: block; }
   font-size: 1rem; color: rgba(255,255,255,0.85); margin-bottom: 1.75rem; position: relative;
 }
 .cta-strip .btn-primary {
-  background: white; color: var(--bg); box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative;
+  background: white; color: var(--pink); box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative;
 }
-.cta-strip .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(0,0,0,0.35); color: var(--bg); }
+.cta-strip .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(0,0,0,0.35); color: var(--pink); }
 .cta-strip .btn-primary.dark {
-  background: var(--bg); color: white;
+  background: #1a1a1a; color: white;
 }
 .cta-strip .btn-primary.dark:hover { color: white; }
 
