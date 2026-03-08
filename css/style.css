@@ -288,6 +288,7 @@ img { max-width: 100%; display: block; }
   display: grid; grid-template-columns: 1.4fr 1fr;
   gap: 3rem; align-items: start; margin-bottom: 4rem;
 }
+.project-pair.equal { grid-template-columns: 1fr 1fr; }
 .project-solo { max-width: 700px; margin: 0 auto 4rem; }
 .project-solo.compact { max-width: 480px; }
 .project-solo.wide { max-width: 920px; }
