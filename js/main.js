@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Scroll reveal ---
   const reveals = document.querySelectorAll(
-    '.art-piece, .project-pair, .project-solo, .about-text, .contact-text, .contact-links, .avatar-trio'
+    '.art-piece, .project-pair, .project-solo, .game-card, .about-text, .contact-text, .contact-links, .avatar-trio'
   );
 
   const obs = new IntersectionObserver((entries) => {

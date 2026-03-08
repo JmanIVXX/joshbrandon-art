@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -54,7 +54,6 @@
     <div class="nav-links">
       <a href="#games">Games</a>
       <a href="#3d">3D</a>
-      <a href="#avatars">Avatars</a>
       <a href="#art">Art</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -67,7 +66,6 @@
   <div class="mobile-menu">
     <a href="#games">Games</a>
     <a href="#3d">3D</a>
-    <a href="#avatars">Avatars</a>
     <a href="#art">Art</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
@@ -75,6 +73,8 @@
 
   <!-- ===== HERO ===== -->
   <header class="hero">
+    <div class="hero-texture" aria-hidden="true"></div>
+
     <div class="hero-content">
       <p class="hero-eyebrow">Available for Hire</p>
       <h1 class="hero-title">Josh<br><span class="highlight">Brandon</span></h1>
@@ -84,9 +84,11 @@
         <a href="#contact" class="btn-outline">Hire Me</a>
       </div>
     </div>
+
     <div class="hero-art">
-      <img src="images/Forest Scene Beauty Shot.png" alt="Hand-painted 3D forest environment diorama by Josh Brandon — stylised isometric game scene with trees, pond, and props">
+      <img src="images/Goddess_Cat_Pt_4 (1).png" alt="Goddess Cat — highly detailed golden Egyptian cat deity character design by Josh Brandon">
     </div>
+
     <div class="scroll-hint" aria-hidden="true">
       <span>Scroll</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -99,59 +101,55 @@
       <p class="section-badge">Lil Indie Games</p>
       <h2 class="section-title">Games</h2>
 
-      <!-- Choc Frog — featured -->
-      <div class="game-feature">
-        <h3 class="game-title">Choc Frog</h3>
-        <p class="game-genre">Action Adventure / Platformer</p>
-        <div class="game-video-wrap video-clickable">
-          <video muted loop playsinline preload="metadata">
-            <source src="images/choc-frog-gameplay.mp4" type="video/mp4">
-          </video>
-          <div class="play-btn">&#9655;</div>
-        </div>
-        <div class="game-below">
-          <div class="game-info">
-            <p class="game-desc">An action-packed adventure where you play as a chocolate-powered frog. Handcrafted world, boss fights, secrets, and a full art pipeline from concept to ship.</p>
-            <div class="btn-row">
-              <a href="#" class="btn-primary small">App Store</a>
-              <a href="#" class="btn-outline small">Watch Trailer</a>
+      <div class="games-grid">
+
+        <!-- Choc Frog -->
+        <div class="game-card">
+          <div class="game-card-video video-clickable">
+            <video muted loop playsinline preload="metadata">
+              <source src="images/choc-frog-gameplay.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn">&#9655;</div>
+          </div>
+          <h3 class="game-title">Choc Frog</h3>
+          <p class="game-genre">Action Adventure · Platformer</p>
+          <p class="game-desc">A chocolate-powered frog on an action adventure. Full art direction, character design, and game development — concept to shipped.</p>
+          <div class="game-card-art">
+            <div class="art-piece">
+              <img src="images/IMG_2171.png" alt="Choc Frog — character sprite sheet with multiple frog colour variants and animation frames">
+              <p class="art-caption">Character Sprites</p>
+            </div>
+            <div class="art-piece">
+              <img src="images/IMG_2164.png" alt="Choc Frog — game UI elements including hearts, coins, and buttons">
+              <p class="art-caption">Game UI</p>
             </div>
           </div>
-          <div class="art-piece">
-            <img src="images/IMG_2171.png" alt="Choc Frog — character sprite sheet with multiple frog colour variants and animation frames">
-            <p class="art-caption">Character Sprites</p>
-          </div>
-          <div class="art-piece">
-            <img src="images/IMG_2164.png" alt="Choc Frog — game UI elements including hearts, buttons, coins, and cursors">
-            <p class="art-caption">Game UI</p>
+          <div class="btn-row">
+            <a href="#" class="btn-primary small">App Store</a>
+            <a href="#" class="btn-outline small">Trailer</a>
           </div>
         </div>
-      </div>
 
-      <hr class="divider">
-
-      <!-- Party Ships — compact: small video left, art + info right -->
-      <div class="game-feature">
-        <h3 class="game-title">Party Ships</h3>
-        <p class="game-genre">Indie Party Game</p>
-        <div class="game-compact">
-          <div class="game-video-wrap video-clickable">
+        <!-- Party Ships -->
+        <div class="game-card">
+          <div class="game-card-video video-clickable">
             <video muted loop playsinline preload="metadata">
               <source src="images/Footage.mp4" type="video/mp4">
             </video>
-            <div class="play-btn small">&#9655;</div>
+            <div class="play-btn">&#9655;</div>
           </div>
-          <div class="game-compact-right">
-            <div class="game-compact-art">
-              <div class="art-piece">
-                <img src="images/Party Ships Items.png" alt="Party Ships — colourful in-game item icons including bombs, lightning, magnets, rubber ducks, and power-ups">
-                <p class="art-caption">Items &amp; Power-ups</p>
-              </div>
+          <h3 class="game-title">Party Ships</h3>
+          <p class="game-genre">Indie Party Game</p>
+          <p class="game-desc">Fast-paced ships, items, and mayhem. Full art direction and game development built from the ground up.</p>
+          <div class="game-card-art single">
+            <div class="art-piece">
+              <img src="images/Party Ships Items.png" alt="Party Ships — colourful in-game item icons including bombs, lightning, magnets, and power-ups">
+              <p class="art-caption">Items &amp; Power-ups</p>
             </div>
-            <p class="game-desc">A fast-paced party game — items, chaos, and a lot of fun. Full art direction and game development from the ground up.</p>
-            <a href="#" class="btn-primary small">Play / Store Page</a>
           </div>
+          <a href="#" class="btn-primary small">Store Page</a>
         </div>
+
       </div>
 
       <hr class="divider">
@@ -160,11 +158,11 @@
       <h3 class="sub-heading">More Games</h3>
       <div class="art-grid two-col">
         <div class="art-piece screenshot">
-          <img src="images/Concept art (Circle of Life).png" alt="Circle of Life — hex-based board game with animal tokens, game UI, and nature theme">
+          <img src="images/Concept art (Circle of Life).png" alt="Circle of Life — hex-based board game with animal tokens and nature theme">
           <p class="art-caption">Circle of Life — Board Game</p>
         </div>
         <div class="art-piece screenshot">
-          <img src="images/Necroferret (unrealized game) concept.png" alt="Necroferret — action RPG game concept with creature combat, spells, health bars, and stylised 2D art">
+          <img src="images/Necroferret (unrealized game) concept.png" alt="Necroferret — action RPG concept with creature combat and stylised 2D art">
           <p class="art-caption">Necroferret — Action RPG Concept</p>
         </div>
       </div>
@@ -173,15 +171,15 @@
       <h3 class="sub-heading">Game Art &amp; Assets</h3>
       <div class="art-grid">
         <div class="art-piece">
-          <img src="images/Final Colour Vs Initial Sketch (Circle of Life).png" alt="Circle of Life — complete animal sprite set including rabbit, fox, badger, owl, frog, and nature elements">
+          <img src="images/Final Colour Vs Initial Sketch (Circle of Life).png" alt="Circle of Life — complete animal sprite set including rabbit, fox, badger, owl, and frog">
           <p class="art-caption">Circle of Life — Animal Sprites</p>
         </div>
         <div class="art-piece">
-          <img src="images/Sprite Sheet (Game Jam).png" alt="Game jam sprite sheet — characters, buildings, trees, creatures, vehicles, and environment props for a 2D game">
-          <p class="art-caption">Game Jam — Full Sprite Sheet</p>
+          <img src="images/Sprite Sheet (Game Jam).png" alt="Game jam sprite sheet — characters, buildings, trees, creatures, and environment props">
+          <p class="art-caption">Game Jam — Sprite Sheet</p>
         </div>
         <div class="art-piece">
-          <img src="images/Example UI.png" alt="RPG inventory UI — hand-painted grid system with gold, silver, and iron resources, category tabs, and tooltip">
+          <img src="images/Example UI.png" alt="RPG inventory UI — hand-painted grid with gold, silver, and iron resources and tooltip">
           <p class="art-caption">Inventory UI System</p>
         </div>
       </div>
@@ -194,44 +192,44 @@
       <h2 class="section-title">3D Work</h2>
       <p class="section-sub">Hand-painted environments, props, and scenes — modeled, textured, and lit.</p>
 
-      <!-- Forest Scene project -->
+      <!-- Forest Scene -->
       <div class="project-pair">
         <div class="project-hero art-piece">
-          <img src="images/Forest Scene Beauty Shot.png" alt="Forest environment — hand-painted 3D isometric diorama with stylised trees, pond, well, mushrooms, and a turtle">
+          <img src="images/Forest Scene Beauty Shot.png" alt="Forest environment — hand-painted 3D isometric diorama with trees, pond, well, mushrooms, and a turtle">
           <p class="art-caption">Forest Scene — Final Render</p>
         </div>
         <div class="project-support art-piece">
-          <img src="images/Forest scene Model and Hand Paint.png" alt="Forest scene — 3D model wireframe alongside hand-painted texture comparison showing the modeling and texturing pipeline">
+          <img src="images/Forest scene Model and Hand Paint.png" alt="Forest scene — 3D model wireframe alongside hand-painted texture comparison">
           <p class="art-caption">Model &amp; Hand-Painted Textures</p>
         </div>
       </div>
 
       <!-- Halloween -->
       <div class="project-solo art-piece">
-        <img src="images/Halloween Model and Hand Paint.png" alt="Halloween scene — hand-painted 3D diorama with jack-o-lantern, spell books, candles, potions, and bookshelf on a wooden floor">
+        <img src="images/Halloween Model and Hand Paint.png" alt="Halloween scene — hand-painted 3D diorama with jack-o-lantern, spell books, candles, and potions">
         <p class="art-caption">Halloween Scene — 3D Diorama</p>
       </div>
 
-      <!-- Bahn Mi project -->
+      <!-- Bahn Mi -->
       <div class="project-pair">
         <div class="project-hero art-piece">
           <img src="images/Bahn Mi Beauty Shot.png" alt="Bahn Mi sandwich — hand-painted 3D prop render with vegetables and bread detail">
           <p class="art-caption">Bahn Mi — Beauty Shot</p>
         </div>
-        <div class="project-support art-piece">
+        <div class="project-support art-piece card">
           <img src="images/Bahn Mi Renders.png" alt="Bahn Mi — three-angle 3D render showing the hand-painted sandwich prop from different views">
           <p class="art-caption">Multi-angle Renders</p>
         </div>
       </div>
 
-      <!-- Props -->
+      <!-- Weapons -->
       <div class="project-pair">
-        <div class="project-hero art-piece">
-          <img src="images/Axe various Renders.png" alt="Axe and shield — hand-painted 3D prop renders from multiple angles showing stylised weapon and shield design">
+        <div class="project-hero art-piece card">
+          <img src="images/Axe various Renders.png" alt="Axe and shield — hand-painted 3D prop renders from multiple angles">
           <p class="art-caption">Axe &amp; Shield — 3D Props</p>
         </div>
-        <div class="project-support art-piece">
-          <img src="images/Sword Render.png" alt="Medieval sword — 3D prop render showing front and back views with weathered metal texturing">
+        <div class="project-support art-piece card">
+          <img src="images/Sword Render.png" alt="Medieval sword — 3D prop render with weathered metal texturing">
           <p class="art-caption">Sword — 3D Prop</p>
         </div>
       </div>
@@ -241,70 +239,79 @@
   <!-- ===== CTA ===== -->
   <div class="cta-strip">
     <h2>Available for Hire</h2>
-    <p>3D environment art, character design, concept art, and game development — open to studio roles and freelance.</p>
+    <p>3D environments, character art, concept art, and game development — open to studio roles and freelance.</p>
     <a href="#contact" class="btn-primary">Get in Touch</a>
   </div>
 
-  <!-- ===== REDDIT AVATARS ===== -->
-  <section id="avatars" class="section">
+  <!-- ===== ART & CHARACTERS ===== -->
+  <section id="art" class="section">
     <div class="section-inner">
+      <h2 class="section-title">Art &amp; Characters</h2>
+
+      <!-- Goddess Cat — featured -->
+      <div class="project-solo compact art-piece blend-lighten">
+        <img src="images/Goddess_Cat_Pt_4 (1).png" alt="Goddess Cat — highly detailed golden Egyptian cat deity character with ornate jewellery, flowing robes, and divine iconography by Josh Brandon">
+        <p class="art-caption">Goddess Cat — Digital Character Design</p>
+      </div>
+
+      <hr class="divider">
+
+      <!-- Reddit Avatars -->
       <div class="reddit-header">
-        <svg class="reddit-icon" viewBox="0 0 24 24" fill="#FF4500" xmlns="http://www.w3.org/2000/svg"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
-        <h2 class="section-title inline">Collectible Avatars</h2>
+        <svg class="reddit-icon" viewBox="0 0 24 24" fill="#FF4500" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+        </svg>
+        <h3 class="section-title inline">Collectible Avatars</h3>
       </div>
       <p class="section-sub">Character illustrations created for the Reddit Collectible Avatar program.</p>
       <div class="avatar-trio">
         <div class="art-piece">
-          <img src="images/Sorceress_High_Quality.png" alt="Sorceress — Reddit collectible avatar character illustration with crystal ball and ice magic">
+          <img src="images/Sorceress_High_Quality.png" alt="Sorceress — Reddit collectible avatar with crystal ball and ice magic">
           <p class="art-caption">Sorceress</p>
         </div>
         <div class="art-piece">
-          <img src="images/DINO_High_Quality.png" alt="Dino — Reddit collectible avatar character illustration, dinosaur creature in a forest">
+          <img src="images/DINO_High_Quality.png" alt="Dino — Reddit collectible avatar, dinosaur creature in a forest">
           <p class="art-caption">Dino</p>
         </div>
         <div class="art-piece">
-          <img src="images/ORC_high_Quality.png" alt="Orc — Reddit collectible avatar character illustration, ice warrior orc with axes">
+          <img src="images/ORC_high_Quality.png" alt="Orc — Reddit collectible avatar, ice warrior with axes">
           <p class="art-caption">Orc</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== CONCEPT ART ===== -->
-  <section id="art" class="section alt">
-    <div class="section-inner">
-      <h2 class="section-title">Concept Art &amp; Illustration</h2>
+      <hr class="divider">
 
-      <!-- Knight project pair -->
+      <!-- Concept Art -->
+      <h3 class="sub-heading">Concept Art &amp; Illustration</h3>
+
       <div class="project-pair">
         <div class="project-hero art-piece">
-          <img src="images/Knight Concept Final.png" alt="Dark knight on horseback — finished character concept art with skull emblem shield, sword, and dramatic lighting by Josh Brandon">
+          <img src="images/Knight Concept Final.png" alt="Dark knight on horseback — finished character concept art with skull shield, sword, and dramatic lighting">
           <p class="art-caption">Knight — Final Concept</p>
         </div>
         <div class="project-support art-piece">
-          <img src="images/Knight process.png" alt="Knight character — full art process from rough sketch to refined linework to greyscale to final colour, showing concept art pipeline">
+          <img src="images/Knight process.png" alt="Knight — full art process from rough sketch to refined linework to colour">
           <p class="art-caption">Knight — Process</p>
         </div>
       </div>
 
       <div class="project-solo art-piece">
-        <img src="images/Dino Samurai Digital Paint.png" alt="Dino Samurai — digital painting of a blue dinosaur warrior character with katana and samurai outfit">
+        <img src="images/Dino Samurai Digital Paint.png" alt="Dino Samurai — digital painting of a blue dinosaur warrior with katana and samurai outfit">
         <p class="art-caption">Dino Samurai</p>
       </div>
 
-      <!-- Mushroom Forest — full width illustration -->
-      <div class="project-solo art-piece wide">
-        <img src="images/mushroom-trees.png" alt="Mushroom forest — detailed black and white ink illustration with giant mushrooms, a snail, a guitar pedal, and a moonlit fantasy scene">
+      <div class="project-solo wide art-piece">
+        <img src="images/mushroom-trees.png" alt="Mushroom forest — detailed black and white ink illustration with giant mushrooms, a snail, and a moonlit fantasy scene">
         <p class="art-caption">Mushroom Forest — Ink Illustration</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
+  <!-- ===== CTA GREEN ===== -->
   <div class="cta-strip green">
     <h2>Commissions Open</h2>
     <p>Character design, 3D environments, concept art, game assets — let's build something.</p>
-    <a href="#contact" class="btn-primary dark">Get a Quote</a>
+    <a href="#contact" class="btn-primary">Get a Quote</a>
   </div>
 
   <!-- ===== ABOUT ===== -->
