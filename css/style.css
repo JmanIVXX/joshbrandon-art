@@ -481,12 +481,25 @@ img { max-width: 100%; display: block; }
    RESPONSIVE
    ======================================== */
 @media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; padding: 6rem 2rem 4rem; text-align: center; }
-  .hero-art { order: -1; max-width: 380px; margin: 0 auto; }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 5.5rem 2rem 3.5rem;
+    text-align: center;
+    justify-items: center;
+  }
+  .hero-content { width: 100%; }
+  .hero-art {
+    order: -1;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .hero-art img { max-height: 42vh; object-fit: contain; }
   .hero-actions { justify-content: center; }
   .scroll-hint { display: none; }
   .games-grid { grid-template-columns: 1fr; max-width: 580px; margin-left: auto; margin-right: auto; }
   .project-pair { grid-template-columns: 1fr; gap: 2rem; }
+  .project-pair.equal { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
