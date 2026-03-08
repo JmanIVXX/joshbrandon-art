@@ -32,22 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // --- Scroll reveal ---
-  const reveals = document.querySelectorAll(
-    '.art-piece, .project-pair, .project-solo, .game-card, .about-text, .contact-text, .contact-links, .avatar-trio'
-  );
-
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('vis');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
-
-  reveals.forEach(el => obs.observe(el));
-
   // --- Lightbox ---
   const lb = document.createElement('div');
   lb.className = 'lightbox';
@@ -86,22 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLB();
   });
 
-  // --- Video play/pause ---
+  // --- Video play/pause (handles autoplay + manual) ---
   document.querySelectorAll('.video-clickable').forEach(wrap => {
     const video = wrap.querySelector('video');
     if (!video) return;
 
-    wrap.addEventListener('click', () => {
-      if (video.paused) {
-        video.play();
-        wrap.classList.add('playing');
-      } else {
-        video.pause();
-        wrap.classList.remove('playing');
-      }
-    });
-
+    // Track play state via events (covers autoplay)
+    video.addEventListener('play',  () => wrap.classList.add('playing'));
+    video.addEventListener('pause', () => wrap.classList.remove('playing'));
     video.addEventListener('ended', () => wrap.classList.remove('playing'));
+
+    // Click to toggle
+    wrap.addEventListener('click', () => {
+      video.paused ? video.play() : video.pause();
+    });
   });
 
 });
